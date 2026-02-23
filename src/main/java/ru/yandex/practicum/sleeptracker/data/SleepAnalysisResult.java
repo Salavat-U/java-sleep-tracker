@@ -19,7 +19,7 @@ public class SleepAnalysisResult<T> {
 
     @Override
     public String toString() {
-        if (result.toString().equals("0")){
+        if (result.toString().equals("0")) {
             return description + ": " + "результат не найден.";
         }
         return description + ": " + result + ".";
