@@ -83,7 +83,7 @@ public class NumberOfSleeplessNightsTest {
 
     @Test
     @DisplayName("Правильно определяет сон ночью")
-    public void testGetNightsSessions(){
+    public void testGetNightsSessions() {
         //Given
         SleepingSession nightTime = new SleepingSession(TEXT_SLEEPING_SESSION);
         //When
