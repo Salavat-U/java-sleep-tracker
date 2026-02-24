@@ -17,7 +17,6 @@ import java.util.Scanner;
 import java.util.function.Function;
 
 public class SleepTrackerApp {
-    private static Scanner scanner;
     private final List<Function<List<SleepingSession>, ? extends SleepAnalysisResult<?>>> functionList =
             new ArrayList<>();
     private final List<SleepingSession> sleepList = new LinkedList<>();
@@ -61,10 +60,7 @@ public class SleepTrackerApp {
     public static void main(String[] args) {
         try {
             SleepTrackerApp app = new SleepTrackerApp();
-            scanner = new Scanner(System.in);
-            System.out.println("Введите путь к файлу с данными о сне:");
-            //Путь для проверки - src/main/resources/sleep_log.txt
-            String fileName = scanner.nextLine();
+            String fileName = args[0];
             app.addSleepSessions(fileName, app);
             app.addFunctions();
             System.out.println("\nРезультат:\n");
@@ -78,8 +74,6 @@ public class SleepTrackerApp {
             System.out.println(e.getMessage());
         } catch (Exception e) {
             System.out.println("Ошибка - " + e.getMessage());
-        } finally {
-            scanner.close();
         }
     }
 }
