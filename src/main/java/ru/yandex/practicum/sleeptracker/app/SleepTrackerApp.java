@@ -1,9 +1,9 @@
 package ru.yandex.practicum.sleeptracker.app;
 
-import ru.yandex.practicum.sleeptracker.exception.ListSleepSessionsIsEmpty;
-import ru.yandex.practicum.sleeptracker.functions.*;
 import ru.yandex.practicum.sleeptracker.data.SleepAnalysisResult;
 import ru.yandex.practicum.sleeptracker.data.SleepingSession;
+import ru.yandex.practicum.sleeptracker.exception.ListSleepSessionsIsEmpty;
+import ru.yandex.practicum.sleeptracker.functions.*;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -13,7 +13,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.function.Function;
 
 public class SleepTrackerApp {
